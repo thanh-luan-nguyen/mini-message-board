@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+
+  .container.text-center
+
+    a(href='/new')
+      button(style="width:25rem;max-width:100%;").btn.btn-secondary.mb-3 Create Message
+
+    each message in messages 
+      .card.mb-3(style="max-width:50rem;margin-inline:auto;") 
+        .card-body 
+          h5.card-title #{message.user}
+          p.card-text #{message.text}

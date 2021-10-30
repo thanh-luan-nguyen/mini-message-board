@@ -1,0 +1,19 @@
+extends layout
+
+block content 
+
+  h3.text-center.mb-4 Create New Message 
+
+  .container
+    form(method='POST' action='/new' style="max-width:50rem;margin-inline:auto;")
+      .mb-3
+        h5(for='user').form-label User name
+        input(type='text' id='user' placeholder="What's your name?" name='user').form-control
+      .mb-3
+        h5(for='message').form-label Message
+        textarea(id='message' rows='3' placeholder='Hi...' name='messageText').form-control
+      .text-center
+        a(href='/')
+          input(type="button" style="width:25rem;max-width:100%;" value="Return to Homepage").btn.btn-secondary.mb-3
+
+        button(type='submit' style="width:25rem;max-width:100%;").btn.btn-secondary Publish
